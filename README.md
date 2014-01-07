@@ -1,7 +1,7 @@
 JWPrettyPrintedSerialization
 ============================
 
-**A parser and composer for pretty printed arrays
+**A parser and composer for pretty printed arrays**
 
 `JWPrettyPrintedSerialization` is a class that can parse and compose strings that represent arrays and dictionaries in the pretty printed array notation like PHP's `print_r` returns.
 
