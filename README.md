@@ -41,6 +41,14 @@ NSString *JSONString = [JWPrettyPrintedSerialization JSONWithPrettyPrintedString
 + (NSString *)JSONWithPrettyPrintedString:(NSString *)string error:(NSError **)error;
 ```
 
+## Tasks
+
+```
+[x] JSON Conversion
+[ ] Pretty printed output (with indentation)
+```
+
+
 ## Contact / Reference
 
 Julian Weinert
