@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, JWPrettyPrintedSerializationOption) {
+	JWPrettyPrintedSerializationOptionNone,
+	JWPrettyPrintedSerializationOptionPrettyPrinted
+};
+
 @interface JWPrettyPrintedSerialization : NSObject
 
 + (id)prettyPrintedObjectWithString:(NSString *)string error:(NSError **)error;

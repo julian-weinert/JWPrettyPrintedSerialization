@@ -8,6 +8,9 @@
 
 #import "JWPrettyPrintedSerialization.h"
 
+static NSInteger indentationLevel;
+static JWPrettyPrintedSerializationOption optionsMask;
+
 @implementation JWPrettyPrintedSerialization
 
 + (id)prettyPrintedObjectWithString:(NSString *)string error:(NSError *__autoreleasing *)error {
@@ -108,13 +111,7 @@
 	
 	for (NSString *key in [dict allKeys]) {
 		if ([key rangeOfCharacterFromSet:[NSCharacterSet decimalDigitCharacterSet]].location == NSNotFound) {
-			NSMutableDictionary *result = [NSMutableDictionary dictionary];
-			
-			[dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-				[result setObject:obj forKey:key];
-			}];
-			
-			return result;
+			return dict;
 		}
 	}
 	
